@@ -1,5 +1,6 @@
 import VaccineTest from "../vaccineTest";
 import Covid19Vaccine from "../covid19Vaccine";
+import Recipient from "../recipient";
 
 const mockAcceptInjection = jest.fn();
 const mockGetHasAntibodies = jest.fn();
@@ -18,6 +19,7 @@ jest.mock("../recipient", () => {
 
 beforeEach(() => {
   // clear mock here
+  Recipient.mockClear();
   mockAcceptInjection.mockClear();
   mockGetHasAntibodies.mockClear();
 });
